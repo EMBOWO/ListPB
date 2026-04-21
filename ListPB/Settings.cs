@@ -28,6 +28,10 @@ namespace ListPB
         public static MelonPreferences_Entry<Color32> SapphireEndColEntry { get; private set; }
         public static MelonPreferences_Entry<Color32> TopazStartColEntry { get; private set; }
         public static MelonPreferences_Entry<Color32> TopazEndColEntry { get; private set; }
+        public static MelonPreferences_Entry<Color32> BloodStartColEntry { get; private set; }
+        public static MelonPreferences_Entry<Color32> BloodEndColEntry { get; private set; }
+        public static MelonPreferences_Entry<Color32> RecordStartColEntry { get; private set; }
+        public static MelonPreferences_Entry<Color32> RecordEndColEntry { get; private set; }
 
         public static MelonPreferences_Entry<bool> ApplyHueShiftEntry { get; private set; }
 
@@ -77,6 +81,14 @@ namespace ListPB
                 new Color32(255, 216, 0, 255), is_hidden: true);
             TopazEndColEntry = category.CreateEntry("Topaz Gradient End Color",
                 new Color32(255, 106, 0, 255), is_hidden: true);
+            BloodStartColEntry = category.CreateEntry("Blood Diamond Gradient Start Color",
+                new Color32(255, 0, 0, 255), is_hidden: true);
+            BloodEndColEntry = category.CreateEntry("Blood Diamond Gradient End Color",
+                new Color32(81, 0, 0, 255), is_hidden: true);
+            RecordStartColEntry = category.CreateEntry("World Record Gradient Start Color",
+                new Color32(255, 85, 170, 255), is_hidden: true);
+            RecordEndColEntry = category.CreateEntry("World Record Gradient End Color",
+                new Color32(255, 85, 241, 255), is_hidden: true);
 
             ApplyHueShiftEntry = category.CreateEntry("Apply Hue Shift", true, is_hidden: true,
                 description: "If enabled, hue shift from NeonLite/Medals will apply to the text.");

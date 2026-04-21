@@ -72,7 +72,7 @@ namespace ListPB
             // thanks neonlite 🙂
             var medalIndex = NeonLite.Modules.CommunityMedals.GetMedalIndex(levelId, timeMicro);
             bool isCommunityMedalsEnabled = NeonLite.Modules.CommunityMedals.setting.Value;
-            medalIndex = Mathf.Clamp(medalIndex, 0, isCommunityMedalsEnabled ? 8 : 4);
+            medalIndex = Mathf.Clamp(medalIndex, 0, isCommunityMedalsEnabled ? 9 : 4);
 
             (Color startCol, Color endCol) = medalIndex switch
             {
@@ -85,6 +85,8 @@ namespace ListPB
                 6 => (Settings.AmethystStartColEntry.Value, Settings.AmethystEndColEntry.Value),
                 7 => (Settings.SapphireStartColEntry.Value, Settings.SapphireEndColEntry.Value),
                 8 => (Settings.TopazStartColEntry.Value, Settings.TopazEndColEntry.Value),
+                9 => (Settings.BloodStartColEntry.Value, Settings.BloodEndColEntry.Value),
+                10 => (Settings.RecordStartColEntry.Value, Settings.RecordEndColEntry.Value),
                 _ => (Settings.BronzeStartColEntry.Value, Settings.BronzeEndColEntry.Value)
             };
 
